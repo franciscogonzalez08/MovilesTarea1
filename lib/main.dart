@@ -140,7 +140,11 @@ class _HomePageState extends State<HomePage> {
                     IconButton(
                       onPressed: (){
                         setState(() {
-                          mailColor = Colors.indigo;
+                          if(mailColor == Colors.black) {
+                            mailColor = Colors.indigo;
+                          } else {
+                            mailColor = Colors.black;
+                          }
                         });
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: const Text('Enviar correo'),
@@ -167,7 +171,11 @@ class _HomePageState extends State<HomePage> {
                     IconButton(
                       onPressed: (){
                         setState(() {
-                          callColor = Colors.indigo;
+                          if(callColor == Colors.black) {
+                            callColor = Colors.indigo;
+                          } else {
+                            callColor = Colors.black;
+                          }
                         });
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: const Text('Hacer llamada'),
@@ -194,7 +202,11 @@ class _HomePageState extends State<HomePage> {
                     IconButton(
                       onPressed: (){
                         setState(() {
-                          directionsColor = Colors.indigo;
+                          if(directionsColor == Colors.black) {
+                            directionsColor = Colors.indigo;
+                          } else {
+                            directionsColor = Colors.black;
+                          }
                         });
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: const Text('Ir al ITESO'),
